@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  blood_group: MyString
+  : MyString
+  emergency_contact_1: MyString
+  : 1
+  country: MyString
+  : MyString
+  state: MyString
+  : MyString
+  city: MyString
+  : MyString
+
+two:
+  blood_group: MyString
+  : MyString
+  emergency_contact_1: MyString
+  : 1
+  country: MyString
+  : MyString
+  state: MyString
+  : MyString
+  city: MyString
+  : MyString

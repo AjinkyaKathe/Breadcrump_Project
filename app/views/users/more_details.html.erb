@@ -1,0 +1,46 @@
+<div class="container">
+<%= form_for @more_detail, url: upload_more_details_users_path ,:html => { :multipart => true }  do |f|  %>
+<div class="breadcrump">
+ <p><%= render_breadcrumbs %></p>
+</div>
+<table class="table table-bordered">
+
+<tr>
+<td><%= f.label :blood_group %></td>
+<td><%= f.text_field :blood_group %></td>
+</tr>
+
+
+<tr>
+<td><%= f.label :emergency_contact_1 %></td>
+<td><%= f.text_field :emergency_contact_1 %></td>
+</tr>
+
+<tr>
+<td><%= f.label :country %></td>
+<td><%= f.text_field :country %></td>
+</tr>
+
+<tr>
+<td><%= f.label :state %></td>
+<td><%= f.text_field :state %></td>
+</tr>
+
+<tr>
+<td><%= f.label :city %></td>
+<td><%= f.text_field :city %></td>
+</tr>
+
+<tr>
+ <td rowspan="2"><%= f.file_field :pic %></td>
+</tr> 
+
+<%= time_zone_select(:person, :time_zone) %>
+
+<%= select_date Date.today, prefix: :start_date %>
+
+</table>
+<%= f.submit%>
+%>
+<%end%>
+</div>

@@ -1,0 +1,37 @@
+<table class="table">
+<tr>
+  <th>Blood Group :</th>
+  <td><%= @more_detail.blood_group %></td>
+</tr> 
+
+<tr>
+  <th>Emergency Contact :</th>
+  <td><%= @more_detail.emergency_contact_1 %></td>
+</tr> 
+
+<tr>
+  <th>Country :</th>
+  <td><%= @more_detail.country %></td>
+</tr> 
+
+<tr>
+  <th>State :</th>
+  <td><%= @more_detail.state %></td>
+</tr> 
+
+
+<tr>
+  <th>City :</th>
+  <td><%= @more_detail.city %></td>
+</tr> 
+
+
+<tr>
+ <th>Profile Pic</th>
+ <td><%=image_tag @more_detail.pic.url(:small) %></td>
+</tr>
+
+</table>
+
+
+

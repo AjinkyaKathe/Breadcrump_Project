@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+ <%= render_breadcrumbs %>
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @user.contact %>
+</p>
+
+<p>
+  <strong>Emial:</strong>
+  <%= @user.emial %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @user.gender %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+<%= link_to 'Upload More Details', more_details_users_path(@more_detail)  %>

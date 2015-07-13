@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Contact</th>
+      <th>Emial</th>
+      <th>Gender</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.contact %></td>
+        <td><%= user.emial %></td>
+        <td><%= user.gender %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="alert alert-info"><%= link_to 'Show More Details' , show_more_details_users_path(user) %></td>
+        <td class="alert alert-success"><%= link_to 'Custome show' , custome_show_users_path%></td>
+        <td class="alert alert-info"><%= link_to 'Select user According to name' , selected_user_users_path%></td>
+        <td class="alert alert-success"><button class="btn btn-inverse" onclick="selectAccordingToParms()">Click Me</button></td>
+        
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
+<script type="text/javascript">
+  
+  function selectAccordingToParms()
+  {
+    var result =prompt("Please enter your name ")
+     
+    $.ajax({
+         url: 'users/custome_method',
+         data: {result:result},
+         dataType: "text"
+    }).success(function(json){
+          alert('ak');
+          
+
+    })
+
+    
+  }
+</script>
